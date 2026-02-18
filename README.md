@@ -9,7 +9,7 @@ This repository contains a collection of advanced projects designed for computer
 
 ---
 
-## 1. 🦾 RoboPulse | 3-DOF Robotic Arm Simulation
+## 1. RoboPulse | 3-DOF Robotic Arm Simulation
 
 RoboPulse is a high-fidelity simulation of a 3-Degree of Freedom robotic arm. It implements precise Inverse Kinematics (IK) logic to bridge the gap between abstract mathematics and physical motion.
 
@@ -26,7 +26,7 @@ Access at `http://localhost:5173`.
 
 ---
 
-## 2. 🧠 NeuralMaze | RL AI Maze Solver
+## 2.NeuralMaze | RL AI Maze Solver
 
 NeuralMaze implements a Reinforcement Learning (RL) agent that uses the **Q-Learning algorithm** to master autonomous navigation.
 
@@ -43,7 +43,7 @@ Access at `http://localhost:5173` (or the port specified by Vite).
 
 ---
 
-## 📐 Portfolio Specifications
+## Portfolio Specifications
 
 | Category | Technology | Engineering Focus |
 | :--- | :--- | :--- |
