@@ -1,75 +1,67 @@
-# RoboPulse | 3-DOF Robotic Arm Simulation
+# Systems & AI Engineering Portfolio
 
 [![Node.js](https://img.shields.io/badge/Node.js-v18+-339933?logo=node.js&logoColor=white)](https://nodejs.org/)
 [![Vite](https://img.shields.io/badge/Vite-Modern-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/)
 [![Three.js](https://img.shields.io/badge/Three.js-WebGL-black?logo=three.js)](https://threejs.org/)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![AI](https://img.shields.io/badge/AI-Reinforcement--Learning-blue)](./AI-Maze-Solver)
 
-RoboPulse is a high-fidelity, web-based control system and simulation for a 3-Degree of Freedom (3-DOF) robotic arm. Designed for computer systems engineers, it implements precise Inverse Kinematics (IK) logic and real-time WebGL rendering to bridge the gap between abstract mathematics and physical motion.
-
----
-
-## Key Features
-
-- **Geometric IK Engine**: A pure JavaScript implementation of Inverse Kinematics, solving joint angles (Base, Shoulder, Elbow) for any (X, Y, Z) coordinate within the workspace.
-- **Real-time WebGL Rendering**: High-performance 3D visualization using Three.js with dynamic lighting and hardware-accelerated segment transformations.
-- **Premium Control Interface**: A sleek, dark-themed dashboard featuring glassmorphism, real-time telemetry, and tactical feedback.
-- **Hardware-Ready Logic**: Modular architecture designed for easy integration with ESP32 or Arduino-based hardware controllers via WebSockets or Serial API.
+This repository contains a collection of advanced projects designed for computer systems and AI engineering. It demonstrates core principles in kinematics, autonomous decision-making, and real-time system visualization.
 
 ---
 
-## Project Architecture
+## 1. 🦾 RoboPulse | 3-DOF Robotic Arm Simulation
 
-The system follows a decoupled architecture ensuring separation of concerns between physics logic, rendering, and interaction.
+RoboPulse is a high-fidelity simulation of a 3-Degree of Freedom robotic arm. It implements precise Inverse Kinematics (IK) logic to bridge the gap between abstract mathematics and physical motion.
 
-```mermaid
-graph TD
-    A[index.html] --> B[main.js]
-    B --> C[kinematics.js]
-    B --> D[renderer.js]
-    C -- "Calculates Angles" --> B
-    D -- "Updates Mesh Transforms" --> B
-    B -- "UI Updates" --> A
+### Core Features
+- **Geometric IK Engine**: Pure JS implementation of 3-DOF Inverse Kinematics.
+- **WebGL Rendering**: High-performance 3D visualization using Three.js.
+- **Real-time Telemetry**: Live joint angle tracking (Base, Shoulder, Elbow).
+
+### Running RoboPulse
+```bash
+npx vite
 ```
-
-- **`src/kinematics.js`**: Recursive geometric solvers for joint positions.
-- **`src/renderer.js`**: Scene management, kinematics-to-transform mapping, and lighting.
-- **`src/main.js`**: Central controller handling state management and event propagation.
+Access at `http://localhost:5173`.
 
 ---
 
-## Technical Specifications
+## 2. 🧠 NeuralMaze | RL AI Maze Solver
 
-| Parameter | Specification |
-| :--- | :--- |
-| **DOF** | 3-Degrees of Freedom |
-| **Joints** | Revolute (Base, Shoulder, Elbow) |
-| **Workspace** | Spherical (Radius ≈ 3.5 units) |
-| **Solver** | Geometric Inverse Kinematics |
-| **Stack** | Vanilla TS, Three.js, CSS Power-Tokens |
+NeuralMaze implements a Reinforcement Learning (RL) agent that uses the **Q-Learning algorithm** to master autonomous navigation.
+
+### Core Features
+- **Q-Learning Brain**: Custom-coded TD-learning algorithm (no black-box libraries).
+- **Heatmap Visualization**: Real-time transparency of the agent's internal state-value model.
+- **Dynamic Training**: Adjustable Alpha, Gamma, and Epsilon parameters.
+
+### Running NeuralMaze
+```bash
+npx vite ./AI-Maze-Solver
+```
+Access at `http://localhost:5173` (or the port specified by Vite).
+
+---
+
+## 📐 Portfolio Specifications
+
+| Category | Technology | Engineering Focus |
+| :--- | :--- | :--- |
+| **Robotics** | Three.js, Kinematics | Mathematical Modeling, WebGL |
+| **AI** | Q-Learning, Canvas | Reinforcement Learning, Observability |
+| **Tooling** | Vite, TypeScript, CSS | Modern System UI, Performance |
 
 ---
 
 ## Getting Started
 
-### Prerequisites
-- [Node.js](https://nodejs.org/) (Environment: Windows/macOS/Linux)
-
-### Installation
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
-   cd "Robotics project"
+   git clone https://github.com/ThebeLedwaba/RoboPulse-3-DOF-Robotic-Arm-Simulation.git
    ```
-2. Run the development server (no install needed for this portable version):
-   ```bash
-   npx vite
-   ```
-3. Access the dashboard at `http://localhost:5173`.
+2. Explore the projects in their respective directories (`./` and `./AI-Maze-Solver`).
 
 ---
 
 ## License
-This project is licensed under the MIT License - see the `LICENSE` file for details.
-
-Developed with passion for high-performance robotics engineering.
+MIT License. Developed with passion for high-performance systems engineering.
